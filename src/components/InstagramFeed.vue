@@ -46,6 +46,7 @@ export default {
 
     const fetchInstaData = async function (url) {
       const response = await fetch(url);
+      console.log(response);
       const data = await response.json();
 
       let pics = [];
@@ -64,6 +65,7 @@ export default {
     };
 
     const url = `https://graph.instagram.com/me/media?fields=media_count,media_type,permalink,media_url,caption&access_token=${props.accessToken}`;
+    console.log(url);
     fetchInstaData(url);
 
     return { isLoading, hasError, instagramData };

@@ -5,7 +5,7 @@
 
       <InstagramFeed
         :count="8"
-        accessToken="IGQVJWWWR5TFVFcU1kTU9qTXAwQ1hkSnNDQjRwLU53N0ZAfN2JlQzZAqeXZACWUl0S0RSREllelNjd2E5Wi16Y2R5OHNSM3NWbFdaR1JzbXdwMFNhdnRsRlQtVkdITE9JUmhjbnUzQUlZAdGhhcUNoalNKUQZDZD"
+        accessToken="IGQVJXNGNfaWh2eVFGeUJDZAklNTnltQzl2b2NVOXpreWZAKempSOTJmSGZA0SnhkdXMwRmtYU0stY0h5eUpxU0I5THRrV3lwMUdnbGlZAc3YwWGZAJSnVGaHBXVUZAGVUJxVWtBOXh3RXBBT2VSUm10Wjh1bAZDZD"
         class="d-flex justify-content-center flex-column"
       />
       <div class="row">
