@@ -34,15 +34,6 @@ export default {
     window.addEventListener("scroll", reveal);
 
     reveal();
-
-    // let nav = document.getElementById("#navbar");
-    // console.log(nav);
-    // function outputsize() {
-    //   height.value = navbar.offsetHeight;
-    // }
-    // outputsize();
-
-    // new ResizeObserver(outputsize).observe(navbar);
   },
 };
 </script>
