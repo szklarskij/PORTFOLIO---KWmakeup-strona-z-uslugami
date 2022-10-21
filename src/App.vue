@@ -40,7 +40,7 @@ export default {
 
 <style>
 :root {
-  --navh: 100;
+  --navh: 80px;
 }
 
 html {

@@ -39,16 +39,16 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="nav">
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li class="nav-item" @click="close">
             <a href="#uslugi" class="nav-link text-nowrap">Usługi</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @click="close">
             <a href="#portfolio" class="nav-link text-nowrap">Portfolio</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @click="close">
             <a href="#o-mnie" class="nav-link text-nowrap">O mnie</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" @click="close">
             <a
               href="#kontakt"
               class="btn btn-primary nav-link text-nowrap text-white"
@@ -62,36 +62,15 @@
 </template>
 
 <script>
-import { ref, watch } from "vue";
-import { useElementSize } from "@vueuse/core";
-
 export default {
   setup() {
-    // console.log(document.getElementById("navbar"));
+    const close = function () {
+      const nav = document.getElementById("nav");
+      nav.classList.remove("show");
+    };
 
-    // function observeHeight() {
-    //   const resizeObserver = new ResizeObserver(function () {
-    //     console.log("Size changed");
-    //   });
-
-    //   resizeObserver.observe(document.getElementById("navbar"));
-    // }
-    // observeHeight();
-
-    const el = ref(null);
-    const { width, height } = useElementSize(el);
-
-    watch(height, function () {
-      if (height.value === 51) {
-        document.documentElement.style.setProperty("--navh", "80px");
-      } else if (height.value > 51) {
-        document.documentElement.style.setProperty("--navh", "250px");
-      }
-    });
     return {
-      el,
-      width,
-      height,
+      close,
     };
   },
 };

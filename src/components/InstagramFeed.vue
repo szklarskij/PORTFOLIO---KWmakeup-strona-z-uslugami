@@ -1,7 +1,11 @@
 <template>
   <div class="instagram-wrapper">
-    <h1 v-if="isLoading">LOADING...</h1>
-    <!-- <h1 v-else-if="hasError">Ooops, something went wrong.</h1> -->
+    <div class="d-flex justify-content-center mb-4" v-if="isLoading">
+      <div class="loader"></div>
+    </div>
+    <div v-else-if="hasError" class="d-flex justify-content-center mb-4">
+      <h3>Problem z wyświetleniem galerii. Kliknij "Pokaż więcej".</h3>
+    </div>
     <div v-else class="instagram-gallery">
       <div
         v-for="image in instagramData.slice(0, 8)"
@@ -46,22 +50,22 @@ export default {
 
     const fetchInstaData = async function (url) {
       const response = await fetch(url);
+      if (!response.ok) {
+        isLoading.value = false;
+        hasError.value = true;
+        return;
+      }
 
       const data = await response.json();
 
       let pics = [];
+
       data.data.forEach((item) => {
         if (item.media_type !== "VIDEO") pics.push(item);
       });
+      instagramData.value = pics;
 
-      if (!response.ok) {
-        isLoading.value = false;
-        hasError.value = true;
-      } else {
-        instagramData.value = pics;
-
-        isLoading.value = false;
-      }
+      isLoading.value = false;
     };
 
     const url = `https://graph.instagram.com/me/media?fields=media_count,media_type,permalink,media_url,caption&access_token=${props.accessToken}`;
@@ -72,3 +76,23 @@ export default {
   },
 };
 </script>
+<style scoped>
+.loader {
+  text-align: center;
+  border: 16px solid var(--bs-light); /* Light grey */
+  border-top: 16px solid var(--bs-primary); /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
