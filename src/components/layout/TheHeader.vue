@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md sticky-top bg-white shadow-sm" ref="el">
+  <nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm" ref="el">
     <div class="container">
       <a href="#" class="navbar-brand m-0">
         <div class="row">

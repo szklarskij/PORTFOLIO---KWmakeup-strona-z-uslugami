@@ -12,7 +12,7 @@
         <div class="col-12 justify-content-center">
           <a
             class="btn btn-lg btn-primary d-flex align-items-center text-nowrap justify-content-center"
-            href="#"
+            href="https://www.instagram.com/katarzynawicher_makeup/"
             >Pokaż więcej</a
           >
         </div>
