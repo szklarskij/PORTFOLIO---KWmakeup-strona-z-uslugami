@@ -1,24 +1,36 @@
-# kasia
+# KW Makeup
 
-## Project setup
+## Projekt strony oferująca usługi makijażowe
+
+https://kw-makeup.netlify.app/ - link do strony na portalu Netlify
+
+Nieskończony projekt prostej strony typu "one page site".
+
+#### Użyte technologie:
+
+- Bootstrap
+- Vue 3
+- Css & HTML
+
+### Funkcjonalność strony:
+
+- Płynne przewijanie strony
+- Efekt wysuwania przewijanych komponentów
+- Responsywność
+- Połączenie z galerią Instagrama (obecnie funkcja wyłączona przez publiczne repozytorium)
+
+#### Komendy
+
 ```
+npm run build
+npm run serve
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Przypisy
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Jakub Szklarski
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Kontakt
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+jakubszklarski1@gmail.com
